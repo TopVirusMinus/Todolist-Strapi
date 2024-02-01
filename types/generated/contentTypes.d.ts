@@ -368,12 +368,14 @@ export interface ApiTodoTodo extends Schema.CollectionType {
     singularName: 'todo';
     pluralName: 'todos';
     displayName: 'todo';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Title: Attribute.String;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
