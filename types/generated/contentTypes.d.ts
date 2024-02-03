@@ -376,6 +376,11 @@ export interface ApiTodoTodo extends Schema.CollectionType {
   attributes: {
     Title: Attribute.String;
     description: Attribute.Text;
+    user: Attribute.Relation<
+      'api::todo.todo',
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
